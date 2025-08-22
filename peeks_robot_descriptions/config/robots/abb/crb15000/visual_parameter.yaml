@@ -1,0 +1,121 @@
+# ABB/CRB15000
+
+visual_parameter:
+  link_0:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_0.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_0.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  link_1:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_1.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_1.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  link_2:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_2.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_2.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  link_3:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_3.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_3.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  link_4:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_4.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_4.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  link_5:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_5.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_5.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  link_6:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/link_6.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/link_6.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
