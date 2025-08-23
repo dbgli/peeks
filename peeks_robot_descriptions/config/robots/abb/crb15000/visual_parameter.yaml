@@ -1,15 +1,15 @@
 # ABB/CRB15000
 
 visual_parameter:
-  link_0:
+  base:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_0.dae
+        path: meshes/robots/abb/crb15000/visual/base.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_0.stl
+        path: meshes/robots/abb/crb15000/collision/base.stl
     mesh_offset:
       x: 0
       y: 0
@@ -18,15 +18,15 @@ visual_parameter:
       pitch: 0
       yaw: 0
 
-  link_1:
+  shoulder:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_1.dae
+        path: meshes/robots/abb/crb15000/visual/shoulder.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_1.stl
+        path: meshes/robots/abb/crb15000/collision/shoulder.stl
     mesh_offset:
       x: 0
       y: 0
@@ -35,15 +35,15 @@ visual_parameter:
       pitch: 0
       yaw: 0
 
-  link_2:
+  upper_arm:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_2.dae
+        path: meshes/robots/abb/crb15000/visual/upper_arm.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_2.stl
+        path: meshes/robots/abb/crb15000/collision/upper_arm.stl
     mesh_offset:
       x: 0
       y: 0
@@ -52,15 +52,15 @@ visual_parameter:
       pitch: 0
       yaw: 0
 
-  link_3:
+  forearm:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_3.dae
+        path: meshes/robots/abb/crb15000/visual/forearm.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_3.stl
+        path: meshes/robots/abb/crb15000/collision/forearm.stl
     mesh_offset:
       x: 0
       y: 0
@@ -69,15 +69,15 @@ visual_parameter:
       pitch: 0
       yaw: 0
 
-  link_4:
+  wrist_1:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_4.dae
+        path: meshes/robots/abb/crb15000/visual/wrist_1.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_4.stl
+        path: meshes/robots/abb/crb15000/collision/wrist_1.stl
     mesh_offset:
       x: 0
       y: 0
@@ -86,15 +86,15 @@ visual_parameter:
       pitch: 0
       yaw: 0
 
-  link_5:
+  wrist_2:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_5.dae
+        path: meshes/robots/abb/crb15000/visual/wrist_2.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_5.stl
+        path: meshes/robots/abb/crb15000/collision/wrist_2.stl
     mesh_offset:
       x: 0
       y: 0
@@ -103,15 +103,15 @@ visual_parameter:
       pitch: 0
       yaw: 0
 
-  link_6:
+  wrist_3:
     visual:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/visual/link_6.dae
+        path: meshes/robots/abb/crb15000/visual/wrist_3.dae
     collision:
       mesh:
         package: peeks_robot_descriptions
-        path: meshes/robots/abb/crb15000/collision/link_6.stl
+        path: meshes/robots/abb/crb15000/collision/wrist_3.stl
     mesh_offset:
       x: 0
       y: 0

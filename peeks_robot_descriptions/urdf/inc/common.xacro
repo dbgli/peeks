@@ -14,176 +14,176 @@
     <xacro:property name="cfg_joint_limit_parameter" value="${xacro.load_yaml(joint_limit_parameter_file)}" />
     <xacro:property name="sec_joint_limit" value="${cfg_joint_limit_parameter['joint_limit']}" />
 
-    <xacro:property name="joint_1_lower_limit" value="${sec_joint_limit['joint_1']['min_position']}" scope="parent" />
-    <xacro:property name="joint_1_upper_limit" value="${sec_joint_limit['joint_1']['max_position']}" scope="parent" />
-    <xacro:property name="joint_1_velocity_limit" value="${sec_joint_limit['joint_1']['max_velocity']}" scope="parent" />
-    <xacro:property name="joint_1_effort_limit" value="${sec_joint_limit['joint_1']['max_effort']}" scope="parent" />
+    <xacro:property name="shoulder_lower_limit" value="${sec_joint_limit['shoulder']['min_position']}" scope="parent" />
+    <xacro:property name="shoulder_upper_limit" value="${sec_joint_limit['shoulder']['max_position']}" scope="parent" />
+    <xacro:property name="shoulder_velocity_limit" value="${sec_joint_limit['shoulder']['max_velocity']}" scope="parent" />
+    <xacro:property name="shoulder_effort_limit" value="${sec_joint_limit['shoulder']['max_effort']}" scope="parent" />
 
-    <xacro:property name="joint_2_lower_limit" value="${sec_joint_limit['joint_2']['min_position']}" scope="parent" />
-    <xacro:property name="joint_2_upper_limit" value="${sec_joint_limit['joint_2']['max_position']}" scope="parent" />
-    <xacro:property name="joint_2_velocity_limit" value="${sec_joint_limit['joint_2']['max_velocity']}" scope="parent" />
-    <xacro:property name="joint_2_effort_limit" value="${sec_joint_limit['joint_2']['max_effort']}" scope="parent" />
+    <xacro:property name="upper_arm_lower_limit" value="${sec_joint_limit['upper_arm']['min_position']}" scope="parent" />
+    <xacro:property name="upper_arm_upper_limit" value="${sec_joint_limit['upper_arm']['max_position']}" scope="parent" />
+    <xacro:property name="upper_arm_velocity_limit" value="${sec_joint_limit['upper_arm']['max_velocity']}" scope="parent" />
+    <xacro:property name="upper_arm_effort_limit" value="${sec_joint_limit['upper_arm']['max_effort']}" scope="parent" />
 
-    <xacro:property name="joint_3_lower_limit" value="${sec_joint_limit['joint_3']['min_position']}" scope="parent" />
-    <xacro:property name="joint_3_upper_limit" value="${sec_joint_limit['joint_3']['max_position']}" scope="parent" />
-    <xacro:property name="joint_3_velocity_limit" value="${sec_joint_limit['joint_3']['max_velocity']}" scope="parent" />
-    <xacro:property name="joint_3_effort_limit" value="${sec_joint_limit['joint_3']['max_effort']}" scope="parent" />
+    <xacro:property name="forearm_lower_limit" value="${sec_joint_limit['forearm']['min_position']}" scope="parent" />
+    <xacro:property name="forearm_upper_limit" value="${sec_joint_limit['forearm']['max_position']}" scope="parent" />
+    <xacro:property name="forearm_velocity_limit" value="${sec_joint_limit['forearm']['max_velocity']}" scope="parent" />
+    <xacro:property name="forearm_effort_limit" value="${sec_joint_limit['forearm']['max_effort']}" scope="parent" />
 
-    <xacro:property name="joint_4_lower_limit" value="${sec_joint_limit['joint_4']['min_position']}" scope="parent" />
-    <xacro:property name="joint_4_upper_limit" value="${sec_joint_limit['joint_4']['max_position']}" scope="parent" />
-    <xacro:property name="joint_4_velocity_limit" value="${sec_joint_limit['joint_4']['max_velocity']}" scope="parent" />
-    <xacro:property name="joint_4_effort_limit" value="${sec_joint_limit['joint_4']['max_effort']}" scope="parent" />
+    <xacro:property name="wrist_1_lower_limit" value="${sec_joint_limit['wrist_1']['min_position']}" scope="parent" />
+    <xacro:property name="wrist_1_upper_limit" value="${sec_joint_limit['wrist_1']['max_position']}" scope="parent" />
+    <xacro:property name="wrist_1_velocity_limit" value="${sec_joint_limit['wrist_1']['max_velocity']}" scope="parent" />
+    <xacro:property name="wrist_1_effort_limit" value="${sec_joint_limit['wrist_1']['max_effort']}" scope="parent" />
 
-    <xacro:property name="joint_5_lower_limit" value="${sec_joint_limit['joint_5']['min_position']}" scope="parent" />
-    <xacro:property name="joint_5_upper_limit" value="${sec_joint_limit['joint_5']['max_position']}" scope="parent" />
-    <xacro:property name="joint_5_velocity_limit" value="${sec_joint_limit['joint_5']['max_velocity']}" scope="parent" />
-    <xacro:property name="joint_5_effort_limit" value="${sec_joint_limit['joint_5']['max_effort']}" scope="parent" />
+    <xacro:property name="wrist_2_lower_limit" value="${sec_joint_limit['wrist_2']['min_position']}" scope="parent" />
+    <xacro:property name="wrist_2_upper_limit" value="${sec_joint_limit['wrist_2']['max_position']}" scope="parent" />
+    <xacro:property name="wrist_2_velocity_limit" value="${sec_joint_limit['wrist_2']['max_velocity']}" scope="parent" />
+    <xacro:property name="wrist_2_effort_limit" value="${sec_joint_limit['wrist_2']['max_effort']}" scope="parent" />
 
-    <xacro:property name="joint_6_lower_limit" value="${sec_joint_limit['joint_6']['min_position']}" scope="parent" />
-    <xacro:property name="joint_6_upper_limit" value="${sec_joint_limit['joint_6']['max_position']}" scope="parent" />
-    <xacro:property name="joint_6_velocity_limit" value="${sec_joint_limit['joint_6']['max_velocity']}" scope="parent" />
-    <xacro:property name="joint_6_effort_limit" value="${sec_joint_limit['joint_6']['max_effort']}" scope="parent" />
+    <xacro:property name="wrist_3_lower_limit" value="${sec_joint_limit['wrist_3']['min_position']}" scope="parent" />
+    <xacro:property name="wrist_3_upper_limit" value="${sec_joint_limit['wrist_3']['max_position']}" scope="parent" />
+    <xacro:property name="wrist_3_velocity_limit" value="${sec_joint_limit['wrist_3']['max_velocity']}" scope="parent" />
+    <xacro:property name="wrist_3_effort_limit" value="${sec_joint_limit['wrist_3']['max_effort']}" scope="parent" />
 
     <!-- 机器人运动学参数 -->
     <xacro:property name="cfg_robot_kinematics_parameter" value="${xacro.load_yaml(robot_kinematics_parameter_file)}" />
     <xacro:property name="sec_robot_kinematics" value="${cfg_robot_kinematics_parameter['robot_kinematics']}" />
 
-    <xacro:property name="joint_1_x" value="${sec_robot_kinematics['joint_1']['x']}" scope="parent" />
-    <xacro:property name="joint_1_y" value="${sec_robot_kinematics['joint_1']['y']}" scope="parent" />
-    <xacro:property name="joint_1_z" value="${sec_robot_kinematics['joint_1']['z']}" scope="parent" />
-    <xacro:property name="joint_1_roll" value="${sec_robot_kinematics['joint_1']['roll']}" scope="parent" />
-    <xacro:property name="joint_1_pitch" value="${sec_robot_kinematics['joint_1']['pitch']}" scope="parent" />
-    <xacro:property name="joint_1_yaw" value="${sec_robot_kinematics['joint_1']['yaw']}" scope="parent" />
+    <xacro:property name="shoulder_x" value="${sec_robot_kinematics['shoulder']['x']}" scope="parent" />
+    <xacro:property name="shoulder_y" value="${sec_robot_kinematics['shoulder']['y']}" scope="parent" />
+    <xacro:property name="shoulder_z" value="${sec_robot_kinematics['shoulder']['z']}" scope="parent" />
+    <xacro:property name="shoulder_roll" value="${sec_robot_kinematics['shoulder']['roll']}" scope="parent" />
+    <xacro:property name="shoulder_pitch" value="${sec_robot_kinematics['shoulder']['pitch']}" scope="parent" />
+    <xacro:property name="shoulder_yaw" value="${sec_robot_kinematics['shoulder']['yaw']}" scope="parent" />
 
-    <xacro:property name="joint_2_x" value="${sec_robot_kinematics['joint_2']['x']}" scope="parent" />
-    <xacro:property name="joint_2_y" value="${sec_robot_kinematics['joint_2']['y']}" scope="parent" />
-    <xacro:property name="joint_2_z" value="${sec_robot_kinematics['joint_2']['z']}" scope="parent" />
-    <xacro:property name="joint_2_roll" value="${sec_robot_kinematics['joint_2']['roll']}" scope="parent" />
-    <xacro:property name="joint_2_pitch" value="${sec_robot_kinematics['joint_2']['pitch']}" scope="parent" />
-    <xacro:property name="joint_2_yaw" value="${sec_robot_kinematics['joint_2']['yaw']}" scope="parent" />
+    <xacro:property name="upper_arm_x" value="${sec_robot_kinematics['upper_arm']['x']}" scope="parent" />
+    <xacro:property name="upper_arm_y" value="${sec_robot_kinematics['upper_arm']['y']}" scope="parent" />
+    <xacro:property name="upper_arm_z" value="${sec_robot_kinematics['upper_arm']['z']}" scope="parent" />
+    <xacro:property name="upper_arm_roll" value="${sec_robot_kinematics['upper_arm']['roll']}" scope="parent" />
+    <xacro:property name="upper_arm_pitch" value="${sec_robot_kinematics['upper_arm']['pitch']}" scope="parent" />
+    <xacro:property name="upper_arm_yaw" value="${sec_robot_kinematics['upper_arm']['yaw']}" scope="parent" />
 
-    <xacro:property name="joint_3_x" value="${sec_robot_kinematics['joint_3']['x']}" scope="parent" />
-    <xacro:property name="joint_3_y" value="${sec_robot_kinematics['joint_3']['y']}" scope="parent" />
-    <xacro:property name="joint_3_z" value="${sec_robot_kinematics['joint_3']['z']}" scope="parent" />
-    <xacro:property name="joint_3_roll" value="${sec_robot_kinematics['joint_3']['roll']}" scope="parent" />
-    <xacro:property name="joint_3_pitch" value="${sec_robot_kinematics['joint_3']['pitch']}" scope="parent" />
-    <xacro:property name="joint_3_yaw" value="${sec_robot_kinematics['joint_3']['yaw']}" scope="parent" />
+    <xacro:property name="forearm_x" value="${sec_robot_kinematics['forearm']['x']}" scope="parent" />
+    <xacro:property name="forearm_y" value="${sec_robot_kinematics['forearm']['y']}" scope="parent" />
+    <xacro:property name="forearm_z" value="${sec_robot_kinematics['forearm']['z']}" scope="parent" />
+    <xacro:property name="forearm_roll" value="${sec_robot_kinematics['forearm']['roll']}" scope="parent" />
+    <xacro:property name="forearm_pitch" value="${sec_robot_kinematics['forearm']['pitch']}" scope="parent" />
+    <xacro:property name="forearm_yaw" value="${sec_robot_kinematics['forearm']['yaw']}" scope="parent" />
 
-    <xacro:property name="joint_4_x" value="${sec_robot_kinematics['joint_4']['x']}" scope="parent" />
-    <xacro:property name="joint_4_y" value="${sec_robot_kinematics['joint_4']['y']}" scope="parent" />
-    <xacro:property name="joint_4_z" value="${sec_robot_kinematics['joint_4']['z']}" scope="parent" />
-    <xacro:property name="joint_4_roll" value="${sec_robot_kinematics['joint_4']['roll']}" scope="parent" />
-    <xacro:property name="joint_4_pitch" value="${sec_robot_kinematics['joint_4']['pitch']}" scope="parent" />
-    <xacro:property name="joint_4_yaw" value="${sec_robot_kinematics['joint_4']['yaw']}" scope="parent" />
+    <xacro:property name="wrist_1_x" value="${sec_robot_kinematics['wrist_1']['x']}" scope="parent" />
+    <xacro:property name="wrist_1_y" value="${sec_robot_kinematics['wrist_1']['y']}" scope="parent" />
+    <xacro:property name="wrist_1_z" value="${sec_robot_kinematics['wrist_1']['z']}" scope="parent" />
+    <xacro:property name="wrist_1_roll" value="${sec_robot_kinematics['wrist_1']['roll']}" scope="parent" />
+    <xacro:property name="wrist_1_pitch" value="${sec_robot_kinematics['wrist_1']['pitch']}" scope="parent" />
+    <xacro:property name="wrist_1_yaw" value="${sec_robot_kinematics['wrist_1']['yaw']}" scope="parent" />
 
-    <xacro:property name="joint_5_x" value="${sec_robot_kinematics['joint_5']['x']}" scope="parent" />
-    <xacro:property name="joint_5_y" value="${sec_robot_kinematics['joint_5']['y']}" scope="parent" />
-    <xacro:property name="joint_5_z" value="${sec_robot_kinematics['joint_5']['z']}" scope="parent" />
-    <xacro:property name="joint_5_roll" value="${sec_robot_kinematics['joint_5']['roll']}" scope="parent" />
-    <xacro:property name="joint_5_pitch" value="${sec_robot_kinematics['joint_5']['pitch']}" scope="parent" />
-    <xacro:property name="joint_5_yaw" value="${sec_robot_kinematics['joint_5']['yaw']}" scope="parent" />
+    <xacro:property name="wrist_2_x" value="${sec_robot_kinematics['wrist_2']['x']}" scope="parent" />
+    <xacro:property name="wrist_2_y" value="${sec_robot_kinematics['wrist_2']['y']}" scope="parent" />
+    <xacro:property name="wrist_2_z" value="${sec_robot_kinematics['wrist_2']['z']}" scope="parent" />
+    <xacro:property name="wrist_2_roll" value="${sec_robot_kinematics['wrist_2']['roll']}" scope="parent" />
+    <xacro:property name="wrist_2_pitch" value="${sec_robot_kinematics['wrist_2']['pitch']}" scope="parent" />
+    <xacro:property name="wrist_2_yaw" value="${sec_robot_kinematics['wrist_2']['yaw']}" scope="parent" />
 
-    <xacro:property name="joint_6_x" value="${sec_robot_kinematics['joint_6']['x']}" scope="parent" />
-    <xacro:property name="joint_6_y" value="${sec_robot_kinematics['joint_6']['y']}" scope="parent" />
-    <xacro:property name="joint_6_z" value="${sec_robot_kinematics['joint_6']['z']}" scope="parent" />
-    <xacro:property name="joint_6_roll" value="${sec_robot_kinematics['joint_6']['roll']}" scope="parent" />
-    <xacro:property name="joint_6_pitch" value="${sec_robot_kinematics['joint_6']['pitch']}" scope="parent" />
-    <xacro:property name="joint_6_yaw" value="${sec_robot_kinematics['joint_6']['yaw']}" scope="parent" />
+    <xacro:property name="wrist_3_x" value="${sec_robot_kinematics['wrist_3']['x']}" scope="parent" />
+    <xacro:property name="wrist_3_y" value="${sec_robot_kinematics['wrist_3']['y']}" scope="parent" />
+    <xacro:property name="wrist_3_z" value="${sec_robot_kinematics['wrist_3']['z']}" scope="parent" />
+    <xacro:property name="wrist_3_roll" value="${sec_robot_kinematics['wrist_3']['roll']}" scope="parent" />
+    <xacro:property name="wrist_3_pitch" value="${sec_robot_kinematics['wrist_3']['pitch']}" scope="parent" />
+    <xacro:property name="wrist_3_yaw" value="${sec_robot_kinematics['wrist_3']['yaw']}" scope="parent" />
 
     <!-- 物理参数 -->
     <xacro:property name="cfg_physical_parameter" value="${xacro.load_yaml(physical_parameter_file)}" />
     <xacro:property name="sec_physical_parameter" value="${cfg_physical_parameter['physical_parameter']}" />
 
-    <xacro:property name="link_0_mass" value="${sec_physical_parameter['link_0']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_0_cog" value="${sec_physical_parameter['link_0']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_0_cog" value="${prop_link_0_cog['x']} ${prop_link_0_cog['y']} ${prop_link_0_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_0_inertia_rotation" value="${sec_physical_parameter['link_0']['rotation']}" scope="parent" />
-    <xacro:property name="link_0_inertia_rotation" value="${prop_link_0_inertia_rotation['roll']} ${prop_link_0_inertia_rotation['pitch']} ${prop_link_0_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_0_inertia" value="${sec_physical_parameter['link_0']['tensor']}" scope="parent" />
-    <xacro:property name="link_0_inertia_ixx" value="${prop_link_0_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_0_inertia_ixy" value="${prop_link_0_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_0_inertia_ixz" value="${prop_link_0_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_0_inertia_iyy" value="${prop_link_0_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_0_inertia_iyz" value="${prop_link_0_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_0_inertia_izz" value="${prop_link_0_inertia['izz']}" scope="parent" />
+    <xacro:property name="base_mass" value="${sec_physical_parameter['base']['mass']}" scope="parent" />
+    <xacro:property name="prop_base_cog" value="${sec_physical_parameter['base']['center_of_mass']}" scope="parent" />
+    <xacro:property name="base_cog" value="${prop_base_cog['x']} ${prop_base_cog['y']} ${prop_base_cog['z']}" scope="parent" />
+    <xacro:property name="prop_base_inertia_rotation" value="${sec_physical_parameter['base']['rotation']}" scope="parent" />
+    <xacro:property name="base_inertia_rotation" value="${prop_base_inertia_rotation['roll']} ${prop_base_inertia_rotation['pitch']} ${prop_base_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_base_inertia" value="${sec_physical_parameter['base']['tensor']}" scope="parent" />
+    <xacro:property name="base_inertia_ixx" value="${prop_base_inertia['ixx']}" scope="parent" />
+    <xacro:property name="base_inertia_ixy" value="${prop_base_inertia['ixy']}" scope="parent" />
+    <xacro:property name="base_inertia_ixz" value="${prop_base_inertia['ixz']}" scope="parent" />
+    <xacro:property name="base_inertia_iyy" value="${prop_base_inertia['iyy']}" scope="parent" />
+    <xacro:property name="base_inertia_iyz" value="${prop_base_inertia['iyz']}" scope="parent" />
+    <xacro:property name="base_inertia_izz" value="${prop_base_inertia['izz']}" scope="parent" />
 
-    <xacro:property name="link_1_mass" value="${sec_physical_parameter['link_1']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_1_cog" value="${sec_physical_parameter['link_1']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_1_cog" value="${prop_link_1_cog['x']} ${prop_link_1_cog['y']} ${prop_link_1_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_1_inertia_rotation" value="${sec_physical_parameter['link_1']['rotation']}" scope="parent" />
-    <xacro:property name="link_1_inertia_rotation" value="${prop_link_1_inertia_rotation['roll']} ${prop_link_1_inertia_rotation['pitch']} ${prop_link_1_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_1_inertia" value="${sec_physical_parameter['link_1']['tensor']}" scope="parent" />
-    <xacro:property name="link_1_inertia_ixx" value="${prop_link_1_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_1_inertia_ixy" value="${prop_link_1_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_1_inertia_ixz" value="${prop_link_1_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_1_inertia_iyy" value="${prop_link_1_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_1_inertia_iyz" value="${prop_link_1_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_1_inertia_izz" value="${prop_link_1_inertia['izz']}" scope="parent" />
+    <xacro:property name="shoulder_mass" value="${sec_physical_parameter['shoulder']['mass']}" scope="parent" />
+    <xacro:property name="prop_shoulder_cog" value="${sec_physical_parameter['shoulder']['center_of_mass']}" scope="parent" />
+    <xacro:property name="shoulder_cog" value="${prop_shoulder_cog['x']} ${prop_shoulder_cog['y']} ${prop_shoulder_cog['z']}" scope="parent" />
+    <xacro:property name="prop_shoulder_inertia_rotation" value="${sec_physical_parameter['shoulder']['rotation']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_rotation" value="${prop_shoulder_inertia_rotation['roll']} ${prop_shoulder_inertia_rotation['pitch']} ${prop_shoulder_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_shoulder_inertia" value="${sec_physical_parameter['shoulder']['tensor']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_ixx" value="${prop_shoulder_inertia['ixx']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_ixy" value="${prop_shoulder_inertia['ixy']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_ixz" value="${prop_shoulder_inertia['ixz']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_iyy" value="${prop_shoulder_inertia['iyy']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_iyz" value="${prop_shoulder_inertia['iyz']}" scope="parent" />
+    <xacro:property name="shoulder_inertia_izz" value="${prop_shoulder_inertia['izz']}" scope="parent" />
 
-    <xacro:property name="link_2_mass" value="${sec_physical_parameter['link_2']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_2_cog" value="${sec_physical_parameter['link_2']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_2_cog" value="${prop_link_2_cog['x']} ${prop_link_2_cog['y']} ${prop_link_2_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_2_inertia_rotation" value="${sec_physical_parameter['link_2']['rotation']}" scope="parent" />
-    <xacro:property name="link_2_inertia_rotation" value="${prop_link_2_inertia_rotation['roll']} ${prop_link_2_inertia_rotation['pitch']} ${prop_link_2_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_2_inertia" value="${sec_physical_parameter['link_2']['tensor']}" scope="parent" />
-    <xacro:property name="link_2_inertia_ixx" value="${prop_link_2_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_2_inertia_ixy" value="${prop_link_2_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_2_inertia_ixz" value="${prop_link_2_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_2_inertia_iyy" value="${prop_link_2_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_2_inertia_iyz" value="${prop_link_2_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_2_inertia_izz" value="${prop_link_2_inertia['izz']}" scope="parent" />
+    <xacro:property name="upper_arm_mass" value="${sec_physical_parameter['upper_arm']['mass']}" scope="parent" />
+    <xacro:property name="prop_upper_arm_cog" value="${sec_physical_parameter['upper_arm']['center_of_mass']}" scope="parent" />
+    <xacro:property name="upper_arm_cog" value="${prop_upper_arm_cog['x']} ${prop_upper_arm_cog['y']} ${prop_upper_arm_cog['z']}" scope="parent" />
+    <xacro:property name="prop_upper_arm_inertia_rotation" value="${sec_physical_parameter['upper_arm']['rotation']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_rotation" value="${prop_upper_arm_inertia_rotation['roll']} ${prop_upper_arm_inertia_rotation['pitch']} ${prop_upper_arm_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_upper_arm_inertia" value="${sec_physical_parameter['upper_arm']['tensor']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_ixx" value="${prop_upper_arm_inertia['ixx']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_ixy" value="${prop_upper_arm_inertia['ixy']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_ixz" value="${prop_upper_arm_inertia['ixz']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_iyy" value="${prop_upper_arm_inertia['iyy']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_iyz" value="${prop_upper_arm_inertia['iyz']}" scope="parent" />
+    <xacro:property name="upper_arm_inertia_izz" value="${prop_upper_arm_inertia['izz']}" scope="parent" />
 
-    <xacro:property name="link_3_mass" value="${sec_physical_parameter['link_3']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_3_cog" value="${sec_physical_parameter['link_3']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_3_cog" value="${prop_link_3_cog['x']} ${prop_link_3_cog['y']} ${prop_link_3_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_3_inertia_rotation" value="${sec_physical_parameter['link_3']['rotation']}" scope="parent" />
-    <xacro:property name="link_3_inertia_rotation" value="${prop_link_3_inertia_rotation['roll']} ${prop_link_3_inertia_rotation['pitch']} ${prop_link_3_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_3_inertia" value="${sec_physical_parameter['link_3']['tensor']}" scope="parent" />
-    <xacro:property name="link_3_inertia_ixx" value="${prop_link_3_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_3_inertia_ixy" value="${prop_link_3_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_3_inertia_ixz" value="${prop_link_3_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_3_inertia_iyy" value="${prop_link_3_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_3_inertia_iyz" value="${prop_link_3_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_3_inertia_izz" value="${prop_link_3_inertia['izz']}" scope="parent" />
+    <xacro:property name="forearm_mass" value="${sec_physical_parameter['forearm']['mass']}" scope="parent" />
+    <xacro:property name="prop_forearm_cog" value="${sec_physical_parameter['forearm']['center_of_mass']}" scope="parent" />
+    <xacro:property name="forearm_cog" value="${prop_forearm_cog['x']} ${prop_forearm_cog['y']} ${prop_forearm_cog['z']}" scope="parent" />
+    <xacro:property name="prop_forearm_inertia_rotation" value="${sec_physical_parameter['forearm']['rotation']}" scope="parent" />
+    <xacro:property name="forearm_inertia_rotation" value="${prop_forearm_inertia_rotation['roll']} ${prop_forearm_inertia_rotation['pitch']} ${prop_forearm_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_forearm_inertia" value="${sec_physical_parameter['forearm']['tensor']}" scope="parent" />
+    <xacro:property name="forearm_inertia_ixx" value="${prop_forearm_inertia['ixx']}" scope="parent" />
+    <xacro:property name="forearm_inertia_ixy" value="${prop_forearm_inertia['ixy']}" scope="parent" />
+    <xacro:property name="forearm_inertia_ixz" value="${prop_forearm_inertia['ixz']}" scope="parent" />
+    <xacro:property name="forearm_inertia_iyy" value="${prop_forearm_inertia['iyy']}" scope="parent" />
+    <xacro:property name="forearm_inertia_iyz" value="${prop_forearm_inertia['iyz']}" scope="parent" />
+    <xacro:property name="forearm_inertia_izz" value="${prop_forearm_inertia['izz']}" scope="parent" />
 
-    <xacro:property name="link_4_mass" value="${sec_physical_parameter['link_4']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_4_cog" value="${sec_physical_parameter['link_4']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_4_cog" value="${prop_link_4_cog['x']} ${prop_link_4_cog['y']} ${prop_link_4_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_4_inertia_rotation" value="${sec_physical_parameter['link_4']['rotation']}" scope="parent" />
-    <xacro:property name="link_4_inertia_rotation" value="${prop_link_4_inertia_rotation['roll']} ${prop_link_4_inertia_rotation['pitch']} ${prop_link_4_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_4_inertia" value="${sec_physical_parameter['link_4']['tensor']}" scope="parent" />
-    <xacro:property name="link_4_inertia_ixx" value="${prop_link_4_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_4_inertia_ixy" value="${prop_link_4_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_4_inertia_ixz" value="${prop_link_4_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_4_inertia_iyy" value="${prop_link_4_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_4_inertia_iyz" value="${prop_link_4_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_4_inertia_izz" value="${prop_link_4_inertia['izz']}" scope="parent" />
+    <xacro:property name="wrist_1_mass" value="${sec_physical_parameter['wrist_1']['mass']}" scope="parent" />
+    <xacro:property name="prop_wrist_1_cog" value="${sec_physical_parameter['wrist_1']['center_of_mass']}" scope="parent" />
+    <xacro:property name="wrist_1_cog" value="${prop_wrist_1_cog['x']} ${prop_wrist_1_cog['y']} ${prop_wrist_1_cog['z']}" scope="parent" />
+    <xacro:property name="prop_wrist_1_inertia_rotation" value="${sec_physical_parameter['wrist_1']['rotation']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_rotation" value="${prop_wrist_1_inertia_rotation['roll']} ${prop_wrist_1_inertia_rotation['pitch']} ${prop_wrist_1_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_wrist_1_inertia" value="${sec_physical_parameter['wrist_1']['tensor']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_ixx" value="${prop_wrist_1_inertia['ixx']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_ixy" value="${prop_wrist_1_inertia['ixy']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_ixz" value="${prop_wrist_1_inertia['ixz']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_iyy" value="${prop_wrist_1_inertia['iyy']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_iyz" value="${prop_wrist_1_inertia['iyz']}" scope="parent" />
+    <xacro:property name="wrist_1_inertia_izz" value="${prop_wrist_1_inertia['izz']}" scope="parent" />
 
-    <xacro:property name="link_5_mass" value="${sec_physical_parameter['link_5']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_5_cog" value="${sec_physical_parameter['link_5']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_5_cog" value="${prop_link_5_cog['x']} ${prop_link_5_cog['y']} ${prop_link_5_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_5_inertia_rotation" value="${sec_physical_parameter['link_5']['rotation']}" scope="parent" />
-    <xacro:property name="link_5_inertia_rotation" value="${prop_link_5_inertia_rotation['roll']} ${prop_link_5_inertia_rotation['pitch']} ${prop_link_5_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_5_inertia" value="${sec_physical_parameter['link_5']['tensor']}" scope="parent" />
-    <xacro:property name="link_5_inertia_ixx" value="${prop_link_5_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_5_inertia_ixy" value="${prop_link_5_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_5_inertia_ixz" value="${prop_link_5_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_5_inertia_iyy" value="${prop_link_5_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_5_inertia_iyz" value="${prop_link_5_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_5_inertia_izz" value="${prop_link_5_inertia['izz']}" scope="parent" />
+    <xacro:property name="wrist_2_mass" value="${sec_physical_parameter['wrist_2']['mass']}" scope="parent" />
+    <xacro:property name="prop_wrist_2_cog" value="${sec_physical_parameter['wrist_2']['center_of_mass']}" scope="parent" />
+    <xacro:property name="wrist_2_cog" value="${prop_wrist_2_cog['x']} ${prop_wrist_2_cog['y']} ${prop_wrist_2_cog['z']}" scope="parent" />
+    <xacro:property name="prop_wrist_2_inertia_rotation" value="${sec_physical_parameter['wrist_2']['rotation']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_rotation" value="${prop_wrist_2_inertia_rotation['roll']} ${prop_wrist_2_inertia_rotation['pitch']} ${prop_wrist_2_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_wrist_2_inertia" value="${sec_physical_parameter['wrist_2']['tensor']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_ixx" value="${prop_wrist_2_inertia['ixx']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_ixy" value="${prop_wrist_2_inertia['ixy']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_ixz" value="${prop_wrist_2_inertia['ixz']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_iyy" value="${prop_wrist_2_inertia['iyy']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_iyz" value="${prop_wrist_2_inertia['iyz']}" scope="parent" />
+    <xacro:property name="wrist_2_inertia_izz" value="${prop_wrist_2_inertia['izz']}" scope="parent" />
 
-    <xacro:property name="link_6_mass" value="${sec_physical_parameter['link_6']['mass']}" scope="parent" />
-    <xacro:property name="prop_link_6_cog" value="${sec_physical_parameter['link_6']['center_of_mass']}" scope="parent" />
-    <xacro:property name="link_6_cog" value="${prop_link_6_cog['x']} ${prop_link_6_cog['y']} ${prop_link_6_cog['z']}" scope="parent" />
-    <xacro:property name="prop_link_6_inertia_rotation" value="${sec_physical_parameter['link_6']['rotation']}" scope="parent" />
-    <xacro:property name="link_6_inertia_rotation" value="${prop_link_6_inertia_rotation['roll']} ${prop_link_6_inertia_rotation['pitch']} ${prop_link_6_inertia_rotation['yaw']}" scope="parent" />
-    <xacro:property name="prop_link_6_inertia" value="${sec_physical_parameter['link_6']['tensor']}" scope="parent" />
-    <xacro:property name="link_6_inertia_ixx" value="${prop_link_6_inertia['ixx']}" scope="parent" />
-    <xacro:property name="link_6_inertia_ixy" value="${prop_link_6_inertia['ixy']}" scope="parent" />
-    <xacro:property name="link_6_inertia_ixz" value="${prop_link_6_inertia['ixz']}" scope="parent" />
-    <xacro:property name="link_6_inertia_iyy" value="${prop_link_6_inertia['iyy']}" scope="parent" />
-    <xacro:property name="link_6_inertia_iyz" value="${prop_link_6_inertia['iyz']}" scope="parent" />
-    <xacro:property name="link_6_inertia_izz" value="${prop_link_6_inertia['izz']}" scope="parent" />
+    <xacro:property name="wrist_3_mass" value="${sec_physical_parameter['wrist_3']['mass']}" scope="parent" />
+    <xacro:property name="prop_wrist_3_cog" value="${sec_physical_parameter['wrist_3']['center_of_mass']}" scope="parent" />
+    <xacro:property name="wrist_3_cog" value="${prop_wrist_3_cog['x']} ${prop_wrist_3_cog['y']} ${prop_wrist_3_cog['z']}" scope="parent" />
+    <xacro:property name="prop_wrist_3_inertia_rotation" value="${sec_physical_parameter['wrist_3']['rotation']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_rotation" value="${prop_wrist_3_inertia_rotation['roll']} ${prop_wrist_3_inertia_rotation['pitch']} ${prop_wrist_3_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_wrist_3_inertia" value="${sec_physical_parameter['wrist_3']['tensor']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_ixx" value="${prop_wrist_3_inertia['ixx']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_ixy" value="${prop_wrist_3_inertia['ixy']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_ixz" value="${prop_wrist_3_inertia['ixz']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_iyy" value="${prop_wrist_3_inertia['iyy']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_iyz" value="${prop_wrist_3_inertia['iyz']}" scope="parent" />
+    <xacro:property name="wrist_3_inertia_izz" value="${prop_wrist_3_inertia['izz']}" scope="parent" />
 
     <!-- 视觉参数 -->
     <xacro:property name="cfg_visual_parameter" value="${xacro.load_yaml(visual_parameter_file)}" />

@@ -1,7 +1,7 @@
 # ABB/CRB15000
 
 joint_limit:
-  joint_1:
+  shoulder:
     has_position_limit: true
     has_velocity_limit: true
     has_effort_limit: true
@@ -11,7 +11,7 @@ joint_limit:
     max_velocity: 3.141592654
     max_effort: 150
 
-  joint_2:
+  upper_arm:
     has_position_limit: true
     has_velocity_limit: true
     has_effort_limit: true
@@ -21,7 +21,7 @@ joint_limit:
     max_velocity: 3.141592654
     max_effort: 150
 
-  joint_3:
+  forearm:
     has_position_limit: true
     has_velocity_limit: true
     has_effort_limit: true
@@ -31,7 +31,7 @@ joint_limit:
     max_velocity: 3.141592654
     max_effort: 150
 
-  joint_4:
+  wrist_1:
     has_position_limit: true
     has_velocity_limit: true
     has_effort_limit: true
@@ -41,7 +41,7 @@ joint_limit:
     max_velocity: 3.141592654
     max_effort: 30
 
-  joint_5:
+  wrist_2:
     has_position_limit: true
     has_velocity_limit: true
     has_effort_limit: true
@@ -51,7 +51,7 @@ joint_limit:
     max_velocity: 3.141592654
     max_effort: 30
 
-  joint_6:
+  wrist_3:
     has_position_limit: true
     has_velocity_limit: true
     has_effort_limit: true

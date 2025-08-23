@@ -11,12 +11,12 @@
 
   <xacro:include filename="$(find peeks_robot_descriptions)/urdf/robot_macro.xacro" />
 
-  <link name="world" />
+  <link name="world_link" />
 
   <xacro:create_robot
     robot_name="$(arg robot_name)"
     tf_prefix="$(arg tf_prefix)"
-    parent="world"
+    parent="world_link"
     joint_limit_parameter_file="$(arg joint_limit_param)"
     robot_kinematics_parameter_file="$(arg robot_kinematics_param)"
     physical_parameter_file="$(arg physical_param)"

@@ -4,8 +4,8 @@
     <contributor>
       <authoring_tool>ABB RobotStudio</authoring_tool>
     </contributor>
-    <created>2025-08-20T15:16:24Z</created>
-    <modified>2025-08-20T15:16:24Z</modified>
+    <created>2025-08-23T00:54:06Z</created>
+    <modified>2025-08-23T00:54:06Z</modified>
     <unit meter="1" name="meter" />
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -10640,7 +10640,7 @@
   </library_geometries>
   <library_visual_scenes>
     <visual_scene id="ID840">
-      <node id="ID841" name="link_3">
+      <node id="ID841" name="forearm">
         <instance_geometry url="#ID3">
           <bind_material>
             <technique_common>

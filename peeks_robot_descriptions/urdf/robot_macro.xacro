@@ -22,14 +22,14 @@
       force_abs_path="${force_abs_path}" />
 
     <!-- 连杆 -->
-    <link name="${tf_prefix}link_0">
-      <xacro:get_mesh_param name="link_0" type="mesh_offset" />
+    <link name="${tf_prefix}base_link">
+      <xacro:get_mesh_param name="base" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_0" type="visual" />
+          <xacro:get_mesh name="base" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -37,30 +37,30 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_0" type="collision" />
+          <xacro:get_mesh name="base" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_0_cog}" rpy="${link_0_inertia_rotation}" />
-        <mass value="${link_0_mass}" />
+        <origin xyz="${base_cog}" rpy="${base_inertia_rotation}" />
+        <mass value="${base_mass}" />
         <inertia
-          ixx="${link_0_inertia_ixx}"
-          ixy="${link_0_inertia_ixy}"
-          ixz="${link_0_inertia_ixz}"
-          iyy="${link_0_inertia_iyy}"
-          iyz="${link_0_inertia_iyz}"
-          izz="${link_0_inertia_izz}" />
+          ixx="${base_inertia_ixx}"
+          ixy="${base_inertia_ixy}"
+          ixz="${base_inertia_ixz}"
+          iyy="${base_inertia_iyy}"
+          iyz="${base_inertia_iyz}"
+          izz="${base_inertia_izz}" />
       </inertial>
     </link>
 
-    <link name="${tf_prefix}link_1">
-      <xacro:get_mesh_param name="link_1" type="mesh_offset" />
+    <link name="${tf_prefix}shoulder_link">
+      <xacro:get_mesh_param name="shoulder" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_1" type="visual" />
+          <xacro:get_mesh name="shoulder" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -68,30 +68,30 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_1" type="collision" />
+          <xacro:get_mesh name="shoulder" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_1_cog}" rpy="${link_1_inertia_rotation}" />
-        <mass value="${link_1_mass}" />
+        <origin xyz="${shoulder_cog}" rpy="${shoulder_inertia_rotation}" />
+        <mass value="${shoulder_mass}" />
         <inertia
-          ixx="${link_1_inertia_ixx}"
-          ixy="${link_1_inertia_ixy}"
-          ixz="${link_1_inertia_ixz}"
-          iyy="${link_1_inertia_iyy}"
-          iyz="${link_1_inertia_iyz}"
-          izz="${link_1_inertia_izz}" />
+          ixx="${shoulder_inertia_ixx}"
+          ixy="${shoulder_inertia_ixy}"
+          ixz="${shoulder_inertia_ixz}"
+          iyy="${shoulder_inertia_iyy}"
+          iyz="${shoulder_inertia_iyz}"
+          izz="${shoulder_inertia_izz}" />
       </inertial>
     </link>
 
-    <link name="${tf_prefix}link_2">
-      <xacro:get_mesh_param name="link_2" type="mesh_offset" />
+    <link name="${tf_prefix}upper_arm_link">
+      <xacro:get_mesh_param name="upper_arm" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_2" type="visual" />
+          <xacro:get_mesh name="upper_arm" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -99,30 +99,30 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_2" type="collision" />
+          <xacro:get_mesh name="upper_arm" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_2_cog}" rpy="${link_2_inertia_rotation}" />
-        <mass value="${link_2_mass}" />
+        <origin xyz="${upper_arm_cog}" rpy="${upper_arm_inertia_rotation}" />
+        <mass value="${upper_arm_mass}" />
         <inertia
-          ixx="${link_2_inertia_ixx}"
-          ixy="${link_2_inertia_ixy}"
-          ixz="${link_2_inertia_ixz}"
-          iyy="${link_2_inertia_iyy}"
-          iyz="${link_2_inertia_iyz}"
-          izz="${link_2_inertia_izz}" />
+          ixx="${upper_arm_inertia_ixx}"
+          ixy="${upper_arm_inertia_ixy}"
+          ixz="${upper_arm_inertia_ixz}"
+          iyy="${upper_arm_inertia_iyy}"
+          iyz="${upper_arm_inertia_iyz}"
+          izz="${upper_arm_inertia_izz}" />
       </inertial>
     </link>
 
-    <link name="${tf_prefix}link_3">
-      <xacro:get_mesh_param name="link_3" type="mesh_offset" />
+    <link name="${tf_prefix}forearm_link">
+      <xacro:get_mesh_param name="forearm" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_3" type="visual" />
+          <xacro:get_mesh name="forearm" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -130,30 +130,30 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_3" type="collision" />
+          <xacro:get_mesh name="forearm" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_3_cog}" rpy="${link_3_inertia_rotation}" />
-        <mass value="${link_3_mass}" />
+        <origin xyz="${forearm_cog}" rpy="${forearm_inertia_rotation}" />
+        <mass value="${forearm_mass}" />
         <inertia
-          ixx="${link_3_inertia_ixx}"
-          ixy="${link_3_inertia_ixy}"
-          ixz="${link_3_inertia_ixz}"
-          iyy="${link_3_inertia_iyy}"
-          iyz="${link_3_inertia_iyz}"
-          izz="${link_3_inertia_izz}" />
+          ixx="${forearm_inertia_ixx}"
+          ixy="${forearm_inertia_ixy}"
+          ixz="${forearm_inertia_ixz}"
+          iyy="${forearm_inertia_iyy}"
+          iyz="${forearm_inertia_iyz}"
+          izz="${forearm_inertia_izz}" />
       </inertial>
     </link>
 
-    <link name="${tf_prefix}link_4">
-      <xacro:get_mesh_param name="link_4" type="mesh_offset" />
+    <link name="${tf_prefix}wrist_1_link">
+      <xacro:get_mesh_param name="wrist_1" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_4" type="visual" />
+          <xacro:get_mesh name="wrist_1" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -161,30 +161,30 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_4" type="collision" />
+          <xacro:get_mesh name="wrist_1" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_4_cog}" rpy="${link_4_inertia_rotation}" />
-        <mass value="${link_4_mass}" />
+        <origin xyz="${wrist_1_cog}" rpy="${wrist_1_inertia_rotation}" />
+        <mass value="${wrist_1_mass}" />
         <inertia
-          ixx="${link_4_inertia_ixx}"
-          ixy="${link_4_inertia_ixy}"
-          ixz="${link_4_inertia_ixz}"
-          iyy="${link_4_inertia_iyy}"
-          iyz="${link_4_inertia_iyz}"
-          izz="${link_4_inertia_izz}" />
+          ixx="${wrist_1_inertia_ixx}"
+          ixy="${wrist_1_inertia_ixy}"
+          ixz="${wrist_1_inertia_ixz}"
+          iyy="${wrist_1_inertia_iyy}"
+          iyz="${wrist_1_inertia_iyz}"
+          izz="${wrist_1_inertia_izz}" />
       </inertial>
     </link>
 
-    <link name="${tf_prefix}link_5">
-      <xacro:get_mesh_param name="link_5" type="mesh_offset" />
+    <link name="${tf_prefix}wrist_2_link">
+      <xacro:get_mesh_param name="wrist_2" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_5" type="visual" />
+          <xacro:get_mesh name="wrist_2" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -192,30 +192,30 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_5" type="collision" />
+          <xacro:get_mesh name="wrist_2" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_5_cog}" rpy="${link_5_inertia_rotation}" />
-        <mass value="${link_5_mass}" />
+        <origin xyz="${wrist_2_cog}" rpy="${wrist_2_inertia_rotation}" />
+        <mass value="${wrist_2_mass}" />
         <inertia
-          ixx="${link_5_inertia_ixx}"
-          ixy="${link_5_inertia_ixy}"
-          ixz="${link_5_inertia_ixz}"
-          iyy="${link_5_inertia_iyy}"
-          iyz="${link_5_inertia_iyz}"
-          izz="${link_5_inertia_izz}" />
+          ixx="${wrist_2_inertia_ixx}"
+          ixy="${wrist_2_inertia_ixy}"
+          ixz="${wrist_2_inertia_ixz}"
+          iyy="${wrist_2_inertia_iyy}"
+          iyz="${wrist_2_inertia_iyz}"
+          izz="${wrist_2_inertia_izz}" />
       </inertial>
     </link>
 
-    <link name="${tf_prefix}link_6">
-      <xacro:get_mesh_param name="link_6" type="mesh_offset" />
+    <link name="${tf_prefix}wrist_3_link">
+      <xacro:get_mesh_param name="wrist_3" type="mesh_offset" />
       <visual>
         <origin
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_6" type="visual" />
+          <xacro:get_mesh name="wrist_3" type="visual" />
         </geometry>
       </visual>
       <collision>
@@ -223,116 +223,116 @@
           xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
           rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
         <geometry>
-          <xacro:get_mesh name="link_6" type="collision" />
+          <xacro:get_mesh name="wrist_3" type="collision" />
         </geometry>
       </collision>
       <inertial>
-        <origin xyz="${link_6_cog}" rpy="${link_6_inertia_rotation}" />
-        <mass value="${link_6_mass}" />
+        <origin xyz="${wrist_3_cog}" rpy="${wrist_3_inertia_rotation}" />
+        <mass value="${wrist_3_mass}" />
         <inertia
-          ixx="${link_6_inertia_ixx}"
-          ixy="${link_6_inertia_ixy}"
-          ixz="${link_6_inertia_ixz}"
-          iyy="${link_6_inertia_iyy}"
-          iyz="${link_6_inertia_iyz}"
-          izz="${link_6_inertia_izz}" />
+          ixx="${wrist_3_inertia_ixx}"
+          ixy="${wrist_3_inertia_ixy}"
+          ixz="${wrist_3_inertia_ixz}"
+          iyy="${wrist_3_inertia_iyy}"
+          iyz="${wrist_3_inertia_iyz}"
+          izz="${wrist_3_inertia_izz}" />
       </inertial>
     </link>
 
     <!-- 关节 -->
-    <joint name="${tf_prefix}joint_0" type="fixed">
+    <joint name="${tf_prefix}base_joint" type="fixed">
       <parent link="${parent}" />
-      <child link="${tf_prefix}link_0" />
+      <child link="${tf_prefix}base_link" />
       <xacro:insert_block name="origin" />
     </joint>
 
-    <joint name="${tf_prefix}joint_1" type="revolute">
-      <parent link="${tf_prefix}link_0" />
-      <child link="${tf_prefix}link_1" />
+    <joint name="${tf_prefix}shoulder_joint" type="revolute">
+      <parent link="${tf_prefix}base_link" />
+      <child link="${tf_prefix}shoulder_link" />
       <origin
-        xyz="${joint_1_x} ${joint_1_y} ${joint_1_z}"
-        rpy="${joint_1_roll} ${joint_1_pitch} ${joint_1_yaw}" />
+        xyz="${shoulder_x} ${shoulder_y} ${shoulder_z}"
+        rpy="${shoulder_roll} ${shoulder_pitch} ${shoulder_yaw}" />
       <axis xyz="0 0 1" />
       <limit
-        lower="${joint_1_lower_limit}"
-        upper="${joint_1_upper_limit}"
-        velocity="${joint_1_velocity_limit}"
-        effort="${joint_1_effort_limit}" />
+        lower="${shoulder_lower_limit}"
+        upper="${shoulder_upper_limit}"
+        velocity="${shoulder_velocity_limit}"
+        effort="${shoulder_effort_limit}" />
       <dynamics damping="0" friction="0" />
     </joint>
 
-    <joint name="${tf_prefix}joint_2" type="revolute">
-      <parent link="${tf_prefix}link_1" />
-      <child link="${tf_prefix}link_2" />
+    <joint name="${tf_prefix}upper_arm_joint" type="revolute">
+      <parent link="${tf_prefix}shoulder_link" />
+      <child link="${tf_prefix}upper_arm_link" />
       <origin
-        xyz="${joint_2_x} ${joint_2_y} ${joint_2_z}"
-        rpy="${joint_2_roll} ${joint_2_pitch} ${joint_2_yaw}" />
+        xyz="${upper_arm_x} ${upper_arm_y} ${upper_arm_z}"
+        rpy="${upper_arm_roll} ${upper_arm_pitch} ${upper_arm_yaw}" />
       <axis xyz="0 0 1" />
       <limit
-        lower="${joint_2_lower_limit}"
-        upper="${joint_2_upper_limit}"
-        velocity="${joint_2_velocity_limit}"
-        effort="${joint_2_effort_limit}" />
+        lower="${upper_arm_lower_limit}"
+        upper="${upper_arm_upper_limit}"
+        velocity="${upper_arm_velocity_limit}"
+        effort="${upper_arm_effort_limit}" />
       <dynamics damping="0" friction="0" />
     </joint>
 
-    <joint name="${tf_prefix}joint_3" type="revolute">
-      <parent link="${tf_prefix}link_2" />
-      <child link="${tf_prefix}link_3" />
+    <joint name="${tf_prefix}forearm_joint" type="revolute">
+      <parent link="${tf_prefix}upper_arm_link" />
+      <child link="${tf_prefix}forearm_link" />
       <origin
-        xyz="${joint_3_x} ${joint_3_y} ${joint_3_z}"
-        rpy="${joint_3_roll} ${joint_3_pitch} ${joint_3_yaw}" />
+        xyz="${forearm_x} ${forearm_y} ${forearm_z}"
+        rpy="${forearm_roll} ${forearm_pitch} ${forearm_yaw}" />
       <axis xyz="0 0 1" />
       <limit
-        lower="${joint_3_lower_limit}"
-        upper="${joint_3_upper_limit}"
-        velocity="${joint_3_velocity_limit}"
-        effort="${joint_3_effort_limit}" />
+        lower="${forearm_lower_limit}"
+        upper="${forearm_upper_limit}"
+        velocity="${forearm_velocity_limit}"
+        effort="${forearm_effort_limit}" />
       <dynamics damping="0" friction="0" />
     </joint>
 
-    <joint name="${tf_prefix}joint_4" type="revolute">
-      <parent link="${tf_prefix}link_3" />
-      <child link="${tf_prefix}link_4" />
+    <joint name="${tf_prefix}wrist_1_joint" type="revolute">
+      <parent link="${tf_prefix}forearm_link" />
+      <child link="${tf_prefix}wrist_1_link" />
       <origin
-        xyz="${joint_4_x} ${joint_4_y} ${joint_4_z}"
-        rpy="${joint_4_roll} ${joint_4_pitch} ${joint_4_yaw}" />
+        xyz="${wrist_1_x} ${wrist_1_y} ${wrist_1_z}"
+        rpy="${wrist_1_roll} ${wrist_1_pitch} ${wrist_1_yaw}" />
       <axis xyz="0 0 1" />
       <limit
-        lower="${joint_4_lower_limit}"
-        upper="${joint_4_upper_limit}"
-        velocity="${joint_4_velocity_limit}"
-        effort="${joint_4_effort_limit}" />
+        lower="${wrist_1_lower_limit}"
+        upper="${wrist_1_upper_limit}"
+        velocity="${wrist_1_velocity_limit}"
+        effort="${wrist_1_effort_limit}" />
       <dynamics damping="0" friction="0" />
     </joint>
 
-    <joint name="${tf_prefix}joint_5" type="revolute">
-      <parent link="${tf_prefix}link_4" />
-      <child link="${tf_prefix}link_5" />
+    <joint name="${tf_prefix}wrist_2_joint" type="revolute">
+      <parent link="${tf_prefix}wrist_1_link" />
+      <child link="${tf_prefix}wrist_2_link" />
       <origin
-        xyz="${joint_5_x} ${joint_5_y} ${joint_5_z}"
-        rpy="${joint_5_roll} ${joint_5_pitch} ${joint_5_yaw}" />
+        xyz="${wrist_2_x} ${wrist_2_y} ${wrist_2_z}"
+        rpy="${wrist_2_roll} ${wrist_2_pitch} ${wrist_2_yaw}" />
       <axis xyz="0 0 1" />
       <limit
-        lower="${joint_5_lower_limit}"
-        upper="${joint_5_upper_limit}"
-        velocity="${joint_5_velocity_limit}"
-        effort="${joint_5_effort_limit}" />
+        lower="${wrist_2_lower_limit}"
+        upper="${wrist_2_upper_limit}"
+        velocity="${wrist_2_velocity_limit}"
+        effort="${wrist_2_effort_limit}" />
       <dynamics damping="0" friction="0" />
     </joint>
 
-    <joint name="${tf_prefix}joint_6" type="revolute">
-      <parent link="${tf_prefix}link_5" />
-      <child link="${tf_prefix}link_6" />
+    <joint name="${tf_prefix}wrist_3_joint" type="revolute">
+      <parent link="${tf_prefix}wrist_2_link" />
+      <child link="${tf_prefix}wrist_3_link" />
       <origin
-        xyz="${joint_6_x} ${joint_6_y} ${joint_6_z}"
-        rpy="${joint_6_roll} ${joint_6_pitch} ${joint_6_yaw}" />
+        xyz="${wrist_3_x} ${wrist_3_y} ${wrist_3_z}"
+        rpy="${wrist_3_roll} ${wrist_3_pitch} ${wrist_3_yaw}" />
       <axis xyz="0 0 1" />
       <limit
-        lower="${joint_6_lower_limit}"
-        upper="${joint_6_upper_limit}"
-        velocity="${joint_6_velocity_limit}"
-        effort="${joint_6_effort_limit}" />
+        lower="${wrist_3_lower_limit}"
+        upper="${wrist_3_upper_limit}"
+        velocity="${wrist_3_velocity_limit}"
+        effort="${wrist_3_effort_limit}" />
       <dynamics damping="0" friction="0" />
     </joint>
   </xacro:macro>

@@ -1,7 +1,7 @@
 # ABB/CRB15000
 
 physical_parameter:
-  link_0:
+  base:
     mass: 5.44
     center_of_mass:
       x: -0.00120141
@@ -19,7 +19,7 @@ physical_parameter:
       iyz: 0
       izz: 1
 
-  link_1:
+  shoulder:
     mass: 4.93
     center_of_mass:
       x: -0.000000021
@@ -37,12 +37,12 @@ physical_parameter:
       iyz: 0
       izz: 1
 
-  link_2:
+  upper_arm:
     mass: 3.36
     center_of_mass:
       x: 0.000000108
-      y: 0.221993274
-      z: 0.049009410
+      y: -0.221993274
+      z: -0.04900941
     rotation:
       roll: 0
       pitch: 0
@@ -55,7 +55,7 @@ physical_parameter:
       iyz: 0
       izz: 1
 
-  link_3:
+  forearm:
     mass: 5.18
     center_of_mass:
       x: 0.012813255
@@ -73,7 +73,7 @@ physical_parameter:
       iyz: 0
       izz: 1
 
-  link_4:
+  wrist_1:
     mass: 3.79
     center_of_mass:
       x: 0.000000132
@@ -91,12 +91,12 @@ physical_parameter:
       iyz: 0
       izz: 1
 
-  link_5:
+  wrist_2:
     mass: 4.26
     center_of_mass:
-      x: -0.014720864
-      y: 0.042757167
-      z: 0.078564882
+      x: -0.014720841
+      y: -0.042757165
+      z: -0.07856489
     rotation:
       roll: 0
       pitch: 0
@@ -109,7 +109,7 @@ physical_parameter:
       iyz: 0
       izz: 1
 
-  link_6:
+  wrist_3:
     mass: 1.04
     center_of_mass:
       x: 0.000342005
