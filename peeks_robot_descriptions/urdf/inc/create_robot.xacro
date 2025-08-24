@@ -14,7 +14,7 @@
             physical_parameter_file
             visual_parameter_file
             force_abs_path:=false">
-    <xacro:read_model_config
+    <xacro:read_robot_config
       joint_limit_parameter_file="${joint_limit_parameter_file}"
       robot_kinematics_parameter_file="${robot_kinematics_parameter_file}"
       physical_parameter_file="${physical_parameter_file}"
@@ -239,6 +239,8 @@
       </inertial>
     </link>
 
+    <link name="${tf_prefix}flange_link" />
+
     <!-- 关节 -->
     <joint name="${tf_prefix}base_joint" type="fixed">
       <parent link="${parent}" />
@@ -334,6 +336,12 @@
         velocity="${wrist_3_velocity_limit}"
         effort="${wrist_3_effort_limit}" />
       <dynamics damping="0" friction="0" />
+    </joint>
+
+    <joint name="${tf_prefix}flange_joint" type="fixed">
+      <parent link="${tf_prefix}wrist_3_link" />
+      <child link="${tf_prefix}flange_link" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
     </joint>
   </xacro:macro>
 </robot>

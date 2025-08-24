@@ -27,6 +27,30 @@ def generate_launch_description():
     )
     robot_type = LaunchConfiguration("robot_type")
 
+    tool_name_argument = DeclareLaunchArgument(
+        name="tool_name",
+        default_value="tool_1",
+        description="The name of tool.",
+    )
+    tool_name = LaunchConfiguration("tool_name")
+
+    tool_type_argument = DeclareLaunchArgument(
+        name="tool_type",
+        default_value="dummy",
+        description="Type/series of used tool.",
+        choices=[
+            "dummy",
+        ],
+    )
+    tool_type = LaunchConfiguration("tool_type")
+
+    tf_prefix_argument = DeclareLaunchArgument(
+        name="tf_prefix",
+        default_value='""',
+        description="Prefix of the joint names, useful for multi-robot setup. If changed than also joint names in the controllers' configuration have to be updated.",
+    )
+    tf_prefix = LaunchConfiguration("tf_prefix")
+
     robot_description_file_argument = DeclareLaunchArgument(
         name="robot_description_file",
         default_value=PathJoinSubstitution([FindPackageShare("peeks_robot_descriptions"), "urdf", "robot.urdf.xacro"]),
@@ -40,13 +64,6 @@ def generate_launch_description():
         description="RViz config file (absolute path) to use when launching rviz.",
     )
     rviz_config_file = LaunchConfiguration("rviz_config_file")
-
-    tf_prefix_argument = DeclareLaunchArgument(
-        name="tf_prefix",
-        default_value='""',
-        description="Prefix of the joint names, useful for multi-robot setup. If changed than also joint names in the controllers' configuration have to be updated.",
-    )
-    tf_prefix = LaunchConfiguration("tf_prefix")
 
     # endregion 参数定义
 
@@ -63,6 +80,12 @@ def generate_launch_description():
             " ",
             "robot_type:=",
             robot_type,
+            " ",
+            "tool_name:=",
+            tool_name,
+            " ",
+            "tool_type:=",
+            tool_type,
             " ",
             "tf_prefix:=",
             tf_prefix,
@@ -94,9 +117,11 @@ def generate_launch_description():
     arguments = [
         robot_name_argument,
         robot_type_argument,
+        tool_name_argument,
+        tool_type_argument,
+        tf_prefix_argument,
         robot_description_file_argument,
         rviz_config_file_argument,
-        tf_prefix_argument,
     ]
 
     nodes = [

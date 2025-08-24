@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-  <!-- 从指定型号的yaml文件中加载配置数据。 -->
+  <!-- 从yaml文件中加载机器人配置数据。 -->
   <xacro:macro
-    name="read_model_config"
+    name="read_robot_config"
     params="joint_limit_parameter_file
             robot_kinematics_parameter_file
             physical_parameter_file
@@ -184,6 +184,36 @@
     <xacro:property name="wrist_3_inertia_iyy" value="${prop_wrist_3_inertia['iyy']}" scope="parent" />
     <xacro:property name="wrist_3_inertia_iyz" value="${prop_wrist_3_inertia['iyz']}" scope="parent" />
     <xacro:property name="wrist_3_inertia_izz" value="${prop_wrist_3_inertia['izz']}" scope="parent" />
+
+    <!-- 视觉参数 -->
+    <xacro:property name="cfg_visual_parameter" value="${xacro.load_yaml(visual_parameter_file)}" />
+    <xacro:property name="sec_visual_parameter" value="${cfg_visual_parameter['visual_parameter']}" scope="parent" />
+  </xacro:macro>
+
+  <!-- 从yaml文件中加载工具配置数据。 -->
+  <xacro:macro
+    name="read_tool_config"
+    params="physical_parameter_file
+            visual_parameter_file
+            force_abs_path">
+    <xacro:property name="force_abs_path" value="${force_abs_path}" scope="parent" />
+
+    <!-- 物理参数 -->
+    <xacro:property name="cfg_physical_parameter" value="${xacro.load_yaml(physical_parameter_file)}" />
+    <xacro:property name="sec_physical_parameter" value="${cfg_physical_parameter['physical_parameter']}" />
+
+    <xacro:property name="tool_mass" value="${sec_physical_parameter['tool']['mass']}" scope="parent" />
+    <xacro:property name="prop_tool_cog" value="${sec_physical_parameter['tool']['center_of_mass']}" scope="parent" />
+    <xacro:property name="tool_cog" value="${prop_tool_cog['x']} ${prop_tool_cog['y']} ${prop_tool_cog['z']}" scope="parent" />
+    <xacro:property name="prop_tool_inertia_rotation" value="${sec_physical_parameter['tool']['rotation']}" scope="parent" />
+    <xacro:property name="tool_inertia_rotation" value="${prop_tool_inertia_rotation['roll']} ${prop_tool_inertia_rotation['pitch']} ${prop_tool_inertia_rotation['yaw']}" scope="parent" />
+    <xacro:property name="prop_tool_inertia" value="${sec_physical_parameter['tool']['tensor']}" scope="parent" />
+    <xacro:property name="tool_inertia_ixx" value="${prop_tool_inertia['ixx']}" scope="parent" />
+    <xacro:property name="tool_inertia_ixy" value="${prop_tool_inertia['ixy']}" scope="parent" />
+    <xacro:property name="tool_inertia_ixz" value="${prop_tool_inertia['ixz']}" scope="parent" />
+    <xacro:property name="tool_inertia_iyy" value="${prop_tool_inertia['iyy']}" scope="parent" />
+    <xacro:property name="tool_inertia_iyz" value="${prop_tool_inertia['iyz']}" scope="parent" />
+    <xacro:property name="tool_inertia_izz" value="${prop_tool_inertia['izz']}" scope="parent" />
 
     <!-- 视觉参数 -->
     <xacro:property name="cfg_visual_parameter" value="${xacro.load_yaml(visual_parameter_file)}" />
