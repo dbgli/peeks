@@ -2,8 +2,8 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg robot_name)">
   <xacro:arg name="robot_name" default="robot_1" />
   <xacro:arg name="robot_type" default="abb/crb15000" />
-  <xacro:arg name="joint_limit_param" default="$(find peeks_robot_descriptions)/config/robots/$(arg robot_type)/joint_limit.yaml" />
-  <xacro:arg name="robot_kinematics_param" default="$(find peeks_robot_descriptions)/config/robots/$(arg robot_type)/robot_kinematics.yaml" />
+  <xacro:arg name="robot_joint_limit_param" default="$(find peeks_robot_descriptions)/config/robots/$(arg robot_type)/joint_limit.yaml" />
+  <xacro:arg name="robot_default_kinematics_param" default="$(find peeks_robot_descriptions)/config/robots/$(arg robot_type)/default_kinematics.yaml" />
   <xacro:arg name="robot_physical_param" default="$(find peeks_robot_descriptions)/config/robots/$(arg robot_type)/physical_parameter.yaml" />
   <xacro:arg name="robot_visual_param" default="$(find peeks_robot_descriptions)/config/robots/$(arg robot_type)/visual_parameter.yaml" />
   <xacro:arg name="tool_name" default="tool_1" />
@@ -22,8 +22,8 @@
     robot_name="$(arg robot_name)"
     tf_prefix="$(arg tf_prefix)"
     parent="world_link"
-    joint_limit_parameter_file="$(arg joint_limit_param)"
-    robot_kinematics_parameter_file="$(arg robot_kinematics_param)"
+    joint_limit_parameter_file="$(arg robot_joint_limit_param)"
+    default_kinematics_parameter_file="$(arg robot_default_kinematics_param)"
     physical_parameter_file="$(arg robot_physical_param)"
     visual_parameter_file="$(arg robot_visual_param)"
     force_abs_path="$(arg force_abs_path)">

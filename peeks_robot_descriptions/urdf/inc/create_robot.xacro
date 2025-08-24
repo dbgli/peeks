@@ -10,13 +10,13 @@
             parent
             *origin
             joint_limit_parameter_file
-            robot_kinematics_parameter_file
+            default_kinematics_parameter_file
             physical_parameter_file
             visual_parameter_file
             force_abs_path:=false">
     <xacro:read_robot_config
       joint_limit_parameter_file="${joint_limit_parameter_file}"
-      robot_kinematics_parameter_file="${robot_kinematics_parameter_file}"
+      default_kinematics_parameter_file="${default_kinematics_parameter_file}"
       physical_parameter_file="${physical_parameter_file}"
       visual_parameter_file="${visual_parameter_file}"
       force_abs_path="${force_abs_path}" />

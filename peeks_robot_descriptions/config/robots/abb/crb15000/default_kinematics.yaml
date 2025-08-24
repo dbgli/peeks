@@ -1,6 +1,6 @@
 # ABB/CRB15000
 
-robot_kinematics:
+default_kinematics:
   shoulder:
     x: 0
     y: 0
