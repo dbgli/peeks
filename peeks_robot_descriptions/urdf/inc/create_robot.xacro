@@ -341,7 +341,9 @@
     <joint name="${tf_prefix}flange_joint" type="fixed">
       <parent link="${tf_prefix}wrist_3_link" />
       <child link="${tf_prefix}flange_link" />
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin
+        xyz="${flange_x} ${flange_y} ${flange_z}"
+        rpy="${flange_roll} ${flange_pitch} ${flange_yaw}" />
     </joint>
   </xacro:macro>
 </robot>

@@ -90,6 +90,13 @@
     <xacro:property name="wrist_3_pitch" value="${sec_robot_kinematics['wrist_3']['pitch']}" scope="parent" />
     <xacro:property name="wrist_3_yaw" value="${sec_robot_kinematics['wrist_3']['yaw']}" scope="parent" />
 
+    <xacro:property name="flange_x" value="${sec_robot_kinematics['flange']['x']}" scope="parent" />
+    <xacro:property name="flange_y" value="${sec_robot_kinematics['flange']['y']}" scope="parent" />
+    <xacro:property name="flange_z" value="${sec_robot_kinematics['flange']['z']}" scope="parent" />
+    <xacro:property name="flange_roll" value="${sec_robot_kinematics['flange']['roll']}" scope="parent" />
+    <xacro:property name="flange_pitch" value="${sec_robot_kinematics['flange']['pitch']}" scope="parent" />
+    <xacro:property name="flange_yaw" value="${sec_robot_kinematics['flange']['yaw']}" scope="parent" />
+
     <!-- 物理参数 -->
     <xacro:property name="cfg_physical_parameter" value="${xacro.load_yaml(physical_parameter_file)}" />
     <xacro:property name="sec_physical_parameter" value="${cfg_physical_parameter['physical_parameter']}" />

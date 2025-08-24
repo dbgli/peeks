@@ -48,3 +48,11 @@ robot_kinematics:
     roll: 1.570796327
     pitch: 0
     yaw: 1.570796327
+
+  flange:
+    x: 0
+    y: 0
+    z: 0.0326
+    roll: 0
+    pitch: 0
+    yaw: 0

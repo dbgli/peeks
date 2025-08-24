@@ -163,8 +163,7 @@ Visualization Manager:
                     wrist_2_link:
                       wrist_3_link:
                         flange_link:
-                          tool_link:
-                            {}
+                          tool_link: {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -249,5 +248,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 1740
-  Y: 653
+  X: 66
+  Y: 60
