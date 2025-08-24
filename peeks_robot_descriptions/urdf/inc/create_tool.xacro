@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find peeks_robot_descriptions)/urdf/inc/common.xacro" />
+
+  <!-- 创建工具描述。 -->
+  <xacro:macro
+    name="create_tool"
+    params="tool_name
+            tf_prefix
+            parent
+            *origin
+            physical_parameter_file
+            visual_parameter_file
+            force_abs_path:=false">
+    <xacro:read_tool_config
+      physical_parameter_file="${physical_parameter_file}"
+      visual_parameter_file="${visual_parameter_file}"
+      force_abs_path="${force_abs_path}" />
+
+    <!-- 连杆 -->
+    <link name="${tf_prefix}tool_link">
+      <xacro:get_mesh_param name="tool" type="mesh_offset" />
+      <visual>
+        <origin
+          xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
+          rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
+        <geometry>
+          <xacro:get_mesh name="tool" type="visual" />
+        </geometry>
+      </visual>
+      <collision>
+        <origin
+          xyz="${mesh_param['x']} ${mesh_param['y']} ${mesh_param['z']}"
+          rpy="${mesh_param['roll']} ${mesh_param['pitch']} ${mesh_param['yaw']}" />
+        <geometry>
+          <xacro:get_mesh name="tool" type="collision" />
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="${tool_cog}" rpy="${tool_inertia_rotation}" />
+        <mass value="${tool_mass}" />
+        <inertia
+          ixx="${tool_inertia_ixx}"
+          ixy="${tool_inertia_ixy}"
+          ixz="${tool_inertia_ixz}"
+          iyy="${tool_inertia_iyy}"
+          iyz="${tool_inertia_iyz}"
+          izz="${tool_inertia_izz}" />
+      </inertial>
+    </link>
+
+    <!-- 关节 -->
+    <joint name="${tf_prefix}tool_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link="${tf_prefix}tool_link" />
+      <xacro:insert_block name="origin" />
+    </joint>
+  </xacro:macro>
+</robot>

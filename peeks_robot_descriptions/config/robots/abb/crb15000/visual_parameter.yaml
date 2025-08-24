@@ -1,0 +1,121 @@
+# ABB/CRB15000
+
+visual_parameter:
+  base:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/base.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/base.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  shoulder:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/shoulder.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/shoulder.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  upper_arm:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/upper_arm.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/upper_arm.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  forearm:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/forearm.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/forearm.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  wrist_1:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/wrist_1.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/wrist_1.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  wrist_2:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/wrist_2.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/wrist_2.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0
+
+  wrist_3:
+    visual:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/visual/wrist_3.dae
+    collision:
+      mesh:
+        package: peeks_robot_descriptions
+        path: meshes/robots/abb/crb15000/collision/wrist_3.stl
+    mesh_offset:
+      x: 0
+      y: 0
+      z: 0
+      roll: 0
+      pitch: 0
+      yaw: 0

@@ -1,0 +1,58 @@
+# ABB/CRB15000
+
+default_kinematics:
+  shoulder:
+    x: 0
+    y: 0
+    z: 0.1885
+    roll: 0
+    pitch: 0
+    yaw: 0
+
+  upper_arm:
+    x: 0
+    y: -0.086
+    z: 0.0765
+    roll: -1.570796327
+    pitch: 0
+    yaw: 0
+
+  forearm:
+    x: 0
+    y: -0.444
+    z: 0.001
+    roll: 0
+    pitch: 0
+    yaw: 0
+
+  wrist_1:
+    x: 0.097
+    y: -0.11
+    z: 0.085
+    roll: 1.570796327
+    pitch: 0
+    yaw: 1.570796327
+
+  wrist_2:
+    x: 0
+    y: 0.0745
+    z: 0.373
+    roll: 0
+    pitch: -1.570796327
+    yaw: -1.570796327
+
+  wrist_3:
+    x: 0.0684
+    y: -0.08
+    z: -0.0745
+    roll: 1.570796327
+    pitch: 0
+    yaw: 1.570796327
+
+  flange:
+    x: 0
+    y: 0
+    z: 0.0326
+    roll: 0
+    pitch: 0
+    yaw: 0

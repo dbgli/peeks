@@ -1,0 +1,20 @@
+# Dummy
+
+physical_parameter:
+  tool:
+    mass: 5
+    center_of_mass:
+      x: 0.041233206
+      y: -0.010436413
+      z: 0.0941117
+    rotation:
+      roll: 0
+      pitch: 0
+      yaw: 0
+    tensor:
+      ixx: 1
+      ixy: 0
+      ixz: 0
+      iyy: 1
+      iyz: 0
+      izz: 1

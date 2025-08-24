@@ -1,0 +1,62 @@
+# ABB/CRB15000
+
+joint_limit:
+  shoulder:
+    has_position_limit: true
+    has_velocity_limit: true
+    has_effort_limit: true
+    has_acceleration_limit: false
+    min_position: -3.141592654
+    max_position: 3.141592654
+    max_velocity: 3.141592654
+    max_effort: 150
+
+  upper_arm:
+    has_position_limit: true
+    has_velocity_limit: true
+    has_effort_limit: true
+    has_acceleration_limit: false
+    min_position: -3.141592654
+    max_position: 3.141592654
+    max_velocity: 3.141592654
+    max_effort: 150
+
+  forearm:
+    has_position_limit: true
+    has_velocity_limit: true
+    has_effort_limit: true
+    has_acceleration_limit: false
+    min_position: -3.926990817
+    max_position: 1.483529864
+    max_velocity: 3.141592654
+    max_effort: 150
+
+  wrist_1:
+    has_position_limit: true
+    has_velocity_limit: true
+    has_effort_limit: true
+    has_acceleration_limit: false
+    min_position: -3.141592654
+    max_position: 3.141592654
+    max_velocity: 3.141592654
+    max_effort: 30
+
+  wrist_2:
+    has_position_limit: true
+    has_velocity_limit: true
+    has_effort_limit: true
+    has_acceleration_limit: false
+    min_position: -3.141592654
+    max_position: 3.141592654
+    max_velocity: 3.141592654
+    max_effort: 30
+
+  wrist_3:
+    has_position_limit: true
+    has_velocity_limit: true
+    has_effort_limit: true
+    has_acceleration_limit: false
+    min_position: -4.71238898
+    max_position: 4.71238898
+    max_velocity: 3.141592654
+    max_effort: 30
