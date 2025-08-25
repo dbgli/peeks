@@ -31,10 +31,15 @@ endif()
 # ROS体系下的依赖
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(kdl_parser REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # 非ROS体系下的依赖
 find_package(Boost REQUIRED COMPONENTS system)
 find_package(Eigen3 REQUIRED NO_MODULE)
+find_package(orocos_kdl REQUIRED)
 
 # 正向运动学求解器
 add_executable(fk_solver src/fk_solver.cpp)
@@ -47,9 +52,14 @@ target_include_directories(fk_solver PUBLIC
 target_link_libraries(fk_solver
   Boost::boost
   Boost::system
-  Eigen3::Eigen)
+  Eigen3::Eigen
+  orocos-kdl)
 ament_target_dependencies(fk_solver
-  rclcpp)
+  rclcpp
+  kdl_parser
+  std_msgs
+  sensor_msgs
+  geometry_msgs)
 install(TARGETS fk_solver
   DESTINATION lib/${PROJECT_NAME})
 
@@ -64,9 +74,14 @@ target_include_directories(ik_solver PUBLIC
 target_link_libraries(ik_solver
   Boost::boost
   Boost::system
-  Eigen3::Eigen)
+  Eigen3::Eigen
+  orocos-kdl)
 ament_target_dependencies(ik_solver
-  rclcpp)
+  rclcpp
+  kdl_parser
+  std_msgs
+  sensor_msgs
+  geometry_msgs)
 install(TARGETS ik_solver
   DESTINATION lib/${PROJECT_NAME})
 
