@@ -32,7 +32,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 
 # 共享资源
-install(DIRECTORY datasets tool_model videos
+install(DIRECTORY datasets tool_models videos
   DESTINATION share/${PROJECT_NAME})
 
 # 测试
